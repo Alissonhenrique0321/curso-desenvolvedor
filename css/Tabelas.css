@@ -1,0 +1,62 @@
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+table tr {
+	border: 1px solid #000000;
+}
+
+table tr:nth-child(even) {  /* Para linhas pares odd */
+	background-color: #00AAFF;
+}
+
+table tbody tr:hover {
+	background-color: rgb(0, 255, .2);
+}
+
+table tr td:first-child {
+	text-align: left;
+	font-weight: bold;
+}
+
+table td, th {
+	border: 1px solid #000000;
+	padding: 1rem;
+	font-size: 1.8rem;
+	color: #000000;
+}
+
+.descricao {
+	font-weight: bold;
+}
+
+table th {
+	background-color: #234589;
+	color: #FFFFFF;
+	font-weight: bold;
+	text-align: left;	
+}
+
+.classe-container {
+	padding: 2rem 1rem;
+}
+
+.classe-container h3 {
+	font-size: 2rem;
+	font-style: normal;
+	margin-bottom: 1rem;
+}
+
+.classe-container tfoot td {
+	font-weight: bold;
+}
+
+.classe-container td {
+	text-align: right;
+}
+
+.classe-container tfoot {
+	background-color: #CCCCCC;
+}

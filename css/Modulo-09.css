@@ -1,0 +1,87 @@
+
+@import 'Tabelas.css';
+
+html {
+	font-family: sans-serif;
+}
+
+header p {
+	font-size: 2rem;
+}
+
+header h2 {
+	font-weight: 100;
+	color: aliceblue;
+	
+}
+
+header > h1 {
+	background: #FF0;
+	font-weight: 600;
+}
+
+h1 ~ div {
+	text-transform: uppercase;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+	text-decoration: none;  /* o correto é underline */
+	color: #555555;
+}
+
+a:hover {
+	color: #099;
+	background: #bbb;
+}
+
+a:visited {
+	color: #f00;
+}
+
+a:active {
+	color: #0f0;
+}
+
+header:hover {
+	color: #099;
+}
+
+html {
+	font-family: times new roman;
+}
+
+p {
+	font-weight: normal;
+	color: #034589;
+}
+
+li {
+	letter-spacing: 0.01rem;
+}
+
+h3 {
+	font: italic bold 1.4rem sans-serif;
+	font-size: 22px;
+}
+
+header ,footer {
+	background-color: #034589;
+}
+
+footer p {
+	color: rgb(255, 255, 255)
+}
+
+header p {
+	color: white;
+}
+
+body {
+	background: url(../imagens/matrix.jpg) center top no-repeat #000000;
+}
+
+section {
+	background: rgba(255, 255, 255, 0.75);
+}
+

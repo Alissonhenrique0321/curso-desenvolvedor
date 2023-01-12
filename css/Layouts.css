@@ -1,0 +1,72 @@
+
+html {
+    background-color: #000000;
+}
+
+header {
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: #000000;
+    background-color: #034589;
+    margin: 0;
+}
+
+header > h2 {
+    background: #FF0;
+    font-weight: 600;
+}
+
+footer {
+    background-color: #777;
+    padding: 10px;
+    text-align: center;
+	color: white;
+	background-color: #034589;
+}
+
+ul {
+    font-family: Arial, Helvetica, sans-serif;
+    position: static;
+    margin-top: 10px;
+    padding: 2px;
+    font-size: 1.6rem;
+    color: #000000;
+    text-decoration: none;
+    background-color: #FFF;
+    margin-top: auto;
+}
+
+a {
+    color: #0000FF;
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+a:visited {
+	color: #f00;
+}
+
+div {
+    position: static;
+    margin-top: 10px;
+    padding: 2px;
+    font-size: 1.2rem;
+    color: #000000;
+}
+
+li {
+	letter-spacing: 0.01rem;
+}
+
+body {
+    background: url(../imagens/matrix.jpg);
+}
+
+article {
+    background-color: #FFF;
+}
+
+section {
+	background: rgba(255, 255, 255, 0.75);
+}
