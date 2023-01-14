@@ -4,6 +4,7 @@
 
 html {
     font-size: 62.5%;
+    background-color: azure;
 }
 
 body {
@@ -22,7 +23,7 @@ header {
     background-color: white;
     width: 100%;
     padding: 20px;
-    border-bottom: 2px solid #254159;
+    border-bottom: 5px solid #254159;
 }
 
 h1 {
@@ -69,7 +70,7 @@ section nav {
     background-color: aliceblue;
     display: block;
     float: left
-    width: 30%;   
+    width: 30%;  
 }
 
 section article {
@@ -88,18 +89,19 @@ footer {
 }
 
 ul {
-    padding: 0;
     text-decoration: none;
-    margin: initial;
+    margin-left: 2px;
+    padding: 20px;
+    margin-top: 0;
 }
 
 nav li {
-    background: #254159;
+    background: #34776c;
     width: 20%;
     display: block;
     font-size: 1.6rem;
-    margin: 0;
     border: outset;
+    margin-bottom: 10px;
 } 
 
 nav li:hover {
@@ -134,4 +136,29 @@ footer small {
 
 nav img {
     width: 80%;
+}
+
+h1, h2, h3, h4, p{
+    margin-left: 20px;
+}
+
+.cognito {
+    padding-right: 80px;
+}
+
+#tenho-interesse {
+    background-color: #34776c;
+}
+
+.ultimo-paragrafo {
+    margin-top: 10px;
+    padding-bottom: 20px;
+}
+
+h5, h6 {
+    color: azure;
+    font-size: 1.8rem;
+    margin-left: 20px;
+    margin-top: 0;
+    padding-top: 10px;
 }
