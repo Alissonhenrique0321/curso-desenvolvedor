@@ -4,11 +4,11 @@
 
 html {
     font-size: 62.5%;
-    background-color: azure;
+
 }
 
 body {
-    background-color: #dfcece;
+    
     font-family: 'Roboto Condensed', sans-serif;
 }
 
@@ -16,12 +16,13 @@ body {
     display: block;
     width: 100vw;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 
 header {
     background-color: white;
-    width: 100%;
+    width: 96.8%;
     padding: 20px;
     border-bottom: 5px solid #254159;
 }
@@ -69,14 +70,12 @@ section {
 section nav {
     background-color: aliceblue;
     display: block;
-    float: left
-    width: 30%;  
+    float: left  
 }
 
 section article {
     display: block;
     float: left
-    width: 70%;
 }
 
 footer {
@@ -84,7 +83,7 @@ footer {
     color: white;
     font-size: 1.5rem;
     float: left;
-    width: 100%;
+    width: 96.8%;;
     padding: 20px;
 }
 
@@ -97,7 +96,7 @@ ul {
 
 nav li {
     background: #34776c;
-    width: 20%;
+    width: 15%;
     display: block;
     font-size: 1.6rem;
     border: outset;
@@ -114,7 +113,6 @@ nav a {
 }
 
 a {
-    padding: 0;
     color: aliceblue;
 }
 
@@ -130,9 +128,23 @@ footer small {
     padding-bottom: 1%;
 }
 
-.texto {
-    width: 100vw;
+#saiba-mais{
+    background-color: #849baf;
+    margin-bottom: 20px;
 }
+
+#saiba-mais p,
+#saiba-mais img {
+    width: 55%;
+    display: block;
+    float: left;
+}
+
+#saiba-mais p {
+    font-size: 20px;
+    width: 60%;
+}
+
 
 nav img {
     width: 80%;
@@ -143,7 +155,8 @@ h1, h2, h3, h4, p{
 }
 
 .cognito {
-    padding-right: 80px;
+    width: 100%;
+    margin-left: 50px;
 }
 
 #tenho-interesse {
@@ -151,14 +164,80 @@ h1, h2, h3, h4, p{
 }
 
 .ultimo-paragrafo {
-    margin-top: 10px;
     padding-bottom: 20px;
 }
 
 h5, h6 {
-    color: azure;
+    color: #254159;
     font-size: 1.8rem;
     margin-left: 20px;
     margin-top: 0;
-    padding-top: 10px;
+    padding-top: 20px;
+}
+
+#banner {
+    background-image: url(../images/banner.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 60vh;
+}
+
+.legenda {
+    background-color: rgba(255, 255, 255, .6);
+    margin-bottom: 2.2rem;
+    height: 15vh;
+    padding: 20px;
+    border-radius: 5px;
+    
+}
+
+.legenda-container {
+    width: 50vh;
+    float: right;
+    margin: 10vh 5vh 0 0;
+}
+
+.legenda h4 {
+    margin-top: 0;
+    font-size: 1.8rem;
+    color: #254159;
+    line-height: 150%;
+}
+
+.legenda h5 {
+    font-size: 1.6rem;
+    color: #254159;
+    line-height: 150%;
+}
+ 
+.button-cta {
+    border-radius: 25px;
+    display: inline;
+    background-color: orangered;
+    color: #fff;
+    font-size: 2rem;
+    box-shadow: 2px 2px 2px black;
+    padding: 10px 15px;
+    width: auto;
+    float: right;
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.perguntas {
+    color: #fff;
+    background-color: #254159;
+}
+
+.perguntas h2, dt, dd {
+    color: #fff;
+    margin-left: 20px;
+    padding-bottom: 10px;
+}
+
+.perguntas dt {
+    background-color: #34776c;
+    width: 30%;
 }
