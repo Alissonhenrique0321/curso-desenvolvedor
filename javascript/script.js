@@ -40,33 +40,155 @@ function contagemRegressiva(numero){
 
 // contagemRegressiva(50);
 
-document.addEventListener('submit', function( evento ){
+    const formulario1 = document.getElementById('formulario-01');
+
+    if(formulario1)
+    formulario1.addEventListener('submit', function( evento ){
 
     evento.preventDefault();
     evento.stopPropagation();
 
-    let formulario = document.getElementById('formulario-01');
+    if(this.getAttribute('class').match(/erro/) ) {
+        return false;
+    }
 
-    let dados = new FormData(formulario);
 
-    let objeto = {};
+    let dados = new FormData(this);
 
     let notas = [];
 
     for(let key of dados.keys()) {
-        objeto[key] = dados.get(key);
 
-        // adicionar itens no array
-        notas.push( parseInt(dados.get(key)));
+        let numero = dados.get(key).match(/\d*/) ? Number(dados.get(key)) : 0;
+
+        if(!isNaN(numero)){
+            notas.push(numero);
+        }
 
     }
 
     console.log(notas);
-
-    console.log(objeto);
 
     texto = aprovacao(notas)
 
     document.getElementById('resultado').innerHTML = texto;
 
 });
+
+function validacampo(elemento) {
+
+    elemento.addEventListener('focusout', function(event) {
+
+    event.preventDefault();
+
+    if(this.value == "") {
+        document.querySelector('.mensagem').innerHTML = "Verifique o preenchimento dos campos em vermelho!"
+        this.classList.add('erro');
+        return false;    
+}
+    else {
+        document.querySelector('.mensagem').innerHTML = "";
+        this.classList.remove('erro');
+    }
+});
+
+}
+
+function validacampoNumerico(elemento) {
+
+    elemento.addEventListener('focusout', function(event) {
+
+    event.preventDefault();
+
+    let numero = this.value.match(/[\d]5-[\d]3/) ? this.value.replace(/-/, "") : this.value;
+
+    if(this.numero != "" && this.numero.match(/[0-9]*/) && this.numero >= 0 && this.numero <= 10) {
+        document.querySelector('.mensagem').innerHTML = "";
+        this.classList.remove('erro');   
+}
+    else {
+        document.querySelector('.mensagem').innerHTML = "Verifique o preenchimento dos campos em vermelho!"
+        this.classList.add('erro');
+        return false;
+    }
+});
+
+}
+
+function validaUf(elemento){
+    elemento.addEventListener('focusout', function(event) {
+    
+        event.preventDefault();
+
+        if() {
+            document.querySelector('.mensagem').innerHTML = "";
+            this.classList.remove('erro');   
+    }
+        else {
+            document.querySelector('.mensagem').innerHTML = "Verifique o preenchimento dos campos em vermelho!"
+            this.classList.add('erro');
+            return false;
+}
+});
+}
+
+function validaEmail(elemento){
+    elemento.addEventListener('focusout', function(event) {
+    
+        event.preventDefault();
+
+        if(this.value.match(/@/) && this.value.match(/./) && this.value.match(/com/)) {
+            document.querySelector('.mensagem').innerHTML = "";
+            this.classList.remove('erro');   
+    }
+        else {
+            document.querySelector('.mensagem').innerHTML = "Verifique o preenchimento dos campos em vermelho!"
+            this.classList.add('erro');
+            return false;
+}
+});
+}
+
+function validaCep(elemento){
+    elemento.addEventListener('focusout', function(event) {
+    
+        event.preventDefault();
+
+    if(this.value.match(/-/)) {
+        document.querySelector('.mensagem').innerHTML = "";
+        this.classList.remove('erro');   
+}
+    else {
+        document.querySelector('.mensagem').innerHTML = "Verifique o preenchimento dos campos em vermelho!"
+        this.classList.add('erro');
+        return false;
+
+    }
+});
+}
+
+let camposObrigatorios = document.querySelectorAll('input.obrigatorio');
+let camposNumericos = document.querySelectorAll('input.numero');
+let camposEmail = document.querySelectorAll('input.email');
+let camposCep = document.querySelectorAll('input.cep');
+let camposUf = document.querySelectorAll('input.uf');
+
+for( let emFoco of camposObrigatorios) {
+    validacampo(emFoco);
+}
+
+for( let emFoco of camposNumericos) {
+    validacampoNumerico(emFoco);
+}
+
+for( let emFoco of camposEmail) {
+    validaEmail(emFoco);
+}
+
+for( let emFoco of camposCep) {
+    validaCep(emFoco);
+}
+
+for( let emFoco of camposUf) {
+    validaUf(emFoco);
+}

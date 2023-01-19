@@ -4,17 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/java.css">
     <title>Javascript</title>
 </head>
 <body>
 
     <div class="container">
 
-        <form id="formulario-01">
-            <input type="text" placeholder="Digite um número" name="n1">
-            <input type="text" placeholder="Digite um número" name="n2">
-            <input type="text" placeholder="Digite um número" name="n3">
-            <input type="text" placeholder="Digite um número" name="n4">
+        <div class="mensagem"></div>
+
+        <form id="formulario-02">
+            <h2>Faça seu cadastro</h2>
+            <input type="text" placeholder="Digite seu nome" class="obrigatorio" name="nome">
+            <input type="text" placeholder="Digite seu E-mail" class="email" name="email">
+            <input type="text" placeholder="Digite seu telefone" class="" name="telefone">
+            <input type="text" placeholder="Digite seu Cep" class="cep" name="cep">
+            <input type="text" placeholder="Digite sua Cidade" class="obrigatorio" name="cidade">
+            <input type="text" placeholder="Digite seu uf" class="uf" name="uf">
             <button type="submit">Enviar</button>
         </form>
        <div id="resultado">
