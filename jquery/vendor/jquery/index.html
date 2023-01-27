@@ -31,10 +31,10 @@
                         <a class="nav-link" href="products.html">Produtos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">Sobre nós</a>
+                        <a class="nav-link nav-modal-open" href="about.html" rel="sobre">Sobre nós</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contato</a>
+                        <a class="nav-link nav-modal-open" href="contact.html" rel="contato">Contato</a>
                     </li>
                 </ul>
             </div>
@@ -145,11 +145,59 @@
                 </div>
             </div>
         </div>
+        
+        <!-- Modal Body -->
+        <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+        <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTitleId">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <!-- Optional: Place to the bottom of scripts -->
+        <script>
+            const myModal = new bootstrap.Modal(document.getElementById('modalId'), options)
+            
+        </script>
+        
+        
+        <div id="contato" class="visually-hidden">
+            <form action="post">
+                
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nome</label>
+                    <input type="text" name="nome" id="name" class="form-control" placeholder="Digite seu nome" aria-describedby="helpNome">
+                    <small id="helpNome" class="text-muted">Digite um nome válido</small>
+                </div>
 
-
-    <script src="./jquery-3.6.3.min.js"></script>
-    <script src="../bootstrap/js/bootstrap.min.js"></script>
-    <script src="../OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
-    <script src="./js/custom.js"></script>
-</body>
-</html>
+                <div class="mb-4">
+                    <label for="Email" class="form-label">Email</label>
+                    <input type="text" name="Email" id="Email" class="form-control" placeholder="Digite seu Email" aria-describedby="helpEmail">
+                    <small id="helpEmail" class="text-muted">Digite um email válido</small>
+                </div>
+            
+            <button type="submit" class="btn btn-primary">Enviar</button>
+                
+            </form>
+        </div>
+        
+        
+        <script src="./jquery-3.6.3.min.js"></script>
+        <script src="../bootstrap/js/bootstrap.min.js"></script>
+        <script src="../OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+        <script src="./js/custom.js"></script>
+    </body>
+    </html>

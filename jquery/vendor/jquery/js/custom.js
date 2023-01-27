@@ -27,3 +27,38 @@ $('.featured-item:first a').on('click', function(event){
     alert('Produto esgotado');
 
 })
+
+$('.nav-modal-open').on('click', function(e){
+
+    e.preventDefault();
+    
+    let elem = $(this).attr('rel');
+
+    $('.modal-body').html($('#'+elem).html());
+
+    $('.modal-header h5.modal-title').html($(this).text());
+
+    let myModal = new bootstrap.Modal($('#modalId'));
+
+    myModal.show();
+
+
+})
+
+function validate ( elem ){
+    if( elem.val() == '') {
+
+        console.log('O campo de '+ elem.attr('name') + ' é obrigatório');
+
+        elem.parent().find('.mb-3').show();
+
+        elem.addClass('invalid');
+
+        return false
+
+
+    }else {
+        elem.parent().find('.mb-3').hide();
+        elem.removeClass('invalid');
+    }
+}
